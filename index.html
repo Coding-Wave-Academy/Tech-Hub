@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechHub - Developer Resources</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font globally */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* gray-900 for dark mode */
+            position: relative;
+            z-index: 1;
+        }
+        /* Simple transition for hover effects */
+        .card-hover-effect {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.3s ease;
+        }
+        .card-hover-effect:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        /* Spotlight Gradient Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at top center, rgba(79, 70, 229, 0.25) 0%, rgba(17, 24, 39, 0) 60%);
+            z-index: -1;
+            pointer-events: none;
+        }
+        /* General transition for color changes */
+        body, header, footer, div, span, h1, h2, h3, p, a, button, input {
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="text-gray-200 relative min-h-screen">
+    <header class="bg-gray-800 shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-400">TechHub</a>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-gray-300 hover:text-indigo-400">Home</a>
+                <a href="./list.php" class="text-gray-300 hover:text-indigo-400">Resources</a>
+                <a href="./login.php" class="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 text-sm font-medium relative group">
+                    Login
+                    <span class="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 text-xs text-gray-300 bg-yellow-800 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity">
+                        Admin Only
+                    </span>
+                </a>
+                 </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 relative z-10"> <section class="text-center mb-12">
+        <h1 class="text-4xl font-bold mb-3 text-gray-900 dark:text-white">Find Your Next Project Asset</h1>
+       <p class="text-lg text-gray-600 dark:text-gray-400">Free & Premium Templates, UI Kits, and more for students & developers.</p>
+       <div class="mt-6 max-w-xl mx-auto">
+           <input type="text" placeholder="Search resources (e.g., React, Figma)..." class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-500 dark:focus:border-indigo-500">
+       </div>
+   </section>
+
+   <section>
+        <h2 class="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-100">Explore Resources</h2>
+       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+           <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md dark:shadow-lg dark:shadow-gray-700/50 overflow-hidden card-hover-effect">
+               <img src="https://placehold.co/600x400/e2e8f0/cbd5e0?text=Template+Preview" alt="Resource Preview" class="w-full h-48 object-cover">
+               <div class="p-4">
+                   <span class="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2">Free</span>
+                   <h3 class="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Basic Portfolio Template</h3>
+                   <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">A clean HTML/CSS template for personal portfolios.</p>
+                   <div class="flex justify-between items-center">
+                       <span class="text-xs text-gray-500 dark:text-gray-400 bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">HTML, CSS</span>
+                       <a href="#" class="bg-indigo-600 text-white px-3 py-1.5 rounded-md hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 text-sm font-medium">Download</a>
+                   </div>
+               </div>
+           </div>
+
+           <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md dark:shadow-lg dark:shadow-gray-700/50 overflow-hidden card-hover-effect">
+               <img src="https://placehold.co/600x400/dbeafe/bfdbfe?text=UI+Kit+Preview" alt="Resource Preview" class="w-full h-48 object-cover">
+               <div class="p-4">
+                    <span class="inline-block bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2">Premium</span>
+                   <h3 class="font-semibold text-lg mb-1 text-gray-900 dark:text-white">SaaS Dashboard UI Kit</h3>
+                   <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">Comprehensive Figma UI kit for building SaaS applications.</p>
+                   <div class="flex justify-between items-center">
+                       <span class="text-xs text-gray-500 dark:text-gray-400 bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">Figma</span>
+                       <div class="text-right">
+                           <span class="block text-lg font-semibold text-indigo-600 dark:text-indigo-400">XAF 5,000</span>
+                           <button class="mt-1 bg-green-600 text-white px-3 py-1.5 rounded-md hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-600 text-sm font-medium">Get Access</button>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+           <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md dark:shadow-lg dark:shadow-gray-700/50 overflow-hidden card-hover-effect">
+               <img src="https://placehold.co/600x400/e0f2fe/a5f3fc?text=React+Component" alt="Resource Preview" class="w-full h-48 object-cover">
+               <div class="p-4">
+                   <span class="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2">Free</span>
+                   <h3 class="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Responsive Navbar Component</h3>
+                   <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">A ready-to-use responsive navbar component for React projects.</p>
+                   <div class="flex justify-between items-center">
+                       <span class="text-xs text-gray-500 dark:text-gray-400 bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">React, Tailwind</span>
+                       <a href="#" class="bg-indigo-600 text-white px-3 py-1.5 rounded-md hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 text-sm font-medium">Download</a>
+                   </div>
+               </div>
+           </div>
+
+           <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md dark:shadow-lg dark:shadow-gray-700/50 overflow-hidden card-hover-effect">
+               <img src="https://placehold.co/600x400/fce7f3/fbcfe8?text=Icon+Set" alt="Resource Preview" class="w-full h-48 object-cover">
+               <div class="p-4">
+                   <span class="inline-block bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-2">Premium</span>
+                   <h3 class="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Minimalist Icon Set</h3>
+                   <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">Over 500+ minimalist icons in SVG format for web & app design.</p>
+                   <div class="flex justify-between items-center">
+                       <span class="text-xs text-gray-500 dark:text-gray-400 bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">SVG</span>
+                        <div class="text-right">
+                           <span class="block text-lg font-semibold text-indigo-600 dark:text-indigo-400">XAF 2,500</span>
+                           <button class="mt-1 bg-green-600 text-white px-3 py-1.5 rounded-md hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-600 text-sm font-medium">Get Access</button>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+           </div>
+   </section>
+
+   
+
+</main>
+ <!-- About Us Section -->
+ <section class="mb-12">
+    <h2 class="text-3xl font-bold text-center text-gray-100 mb-6 animate-slide-up">About Us</h2>
+    <p class="text-center text-gray-400 max-w-3xl mx-auto animate-slide-up">
+        TechHub is your go-to platform for high-quality developer resources. Whether you're a student, freelancer, or professional developer, we provide the tools you need to build amazing projects. From free templates to premium UI kits, we have something for everyone.
+    </p>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="mb-12">
+    <h2 class="text-3xl font-bold text-center text-gray-100 mb-6 animate-slide-up">Why Choose Us?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center animate-fade-in">
+            <h3 class="text-xl font-semibold text-indigo-400 mb-2">High-Quality Resources</h3>
+            <p class="text-gray-400">All our resources are carefully curated to ensure top-notch quality for your projects.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center animate-fade-in">
+            <h3 class="text-xl font-semibold text-indigo-400 mb-2">Affordable Pricing</h3>
+            <p class="text-gray-400">We offer both free and premium resources at competitive prices to suit your needs.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center animate-fade-in">
+            <h3 class="text-xl font-semibold text-indigo-400 mb-2">Community Support</h3>
+            <p class="text-gray-400">Join a growing community of developers and get the support you need to succeed.</p>
+        </div>
+    </div>
+</section>
+
+    <footer class="bg-gray-900 text-gray-400 mt-12 py-8 relative z-10">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; <span id="current-year"></span> TechHub. All rights reserved.</p>
+            <div class="mt-2 space-x-4 text-sm">
+                <a href="#" class="hover:text-indigo-400">Privacy Policy</a>
+                <a href="#" class="hover:text-indigo-400">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
